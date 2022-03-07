@@ -29,6 +29,6 @@
     title: 'Web Warrior',
     description: 'web dev portfolio',
     copyright: 'This website is copyright 2021 Web Warrior',
-    contact: 'me@thewebwarrioruk.co.uk',
+    contact: 'Ball085573@hotmail.com',
   },
 }
