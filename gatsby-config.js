@@ -4,31 +4,31 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
-module.exports = {
+ module.exports = {
   /* Your site config here */
   plugins: [
+    `gatsby-transformer-remark`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        // Footnotes mode (default: true)
-        footnotes: true,
-        // GitHub Flavored Markdown mode (default: true)
-        gfm: true,
-        // Plugins configs
-        plugins: [],
+        name: `projects`,
+        path: `${__dirname}/src/projects/`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `notes`,
-        path: `${__dirname}/src/projects/`,
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       },
     },
   ],
   siteMetadata: {
     title: 'Web Warrior',
-    description : 'web dev portfolio',
-    coppyright: 'This website is copyright 2022 Web Warrior'
-  }
+    description: 'web dev portfolio',
+    copyright: 'This website is copyright 2021 Web Warrior',
+    contact: 'me@thewebwarrioruk.co.uk',
+  },
 }
